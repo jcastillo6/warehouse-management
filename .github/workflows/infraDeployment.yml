@@ -1,11 +1,7 @@
 on:
   push:
     paths:
-      include:
-        - infra/**
-pool:
-  vmImage: 'ubuntu-latest'
-
+      - infra/**
 jobs:
   build:
     runs-on: ubuntu-latest
