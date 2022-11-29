@@ -1,15 +1,14 @@
-trigger:
-  path:
-    include:
-      - infra/**
+on:
+  push:
+    paths:
+      include:
+        - infra/**
 pool:
   vmImage: 'ubuntu-latest'
 
-stages:
-  jobs:
-    job:
-      steps:
-        - script: echo This runs in the default shell on any machine
-        - bash: |
-            echo This multiline script always runs in Bash.
-            echo Even on Windows machines!
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        echo 'building'
