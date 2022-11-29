@@ -1,5 +1,7 @@
 name: Infra Build
+
 on:
+  workflow_dispatch:
   push:
     paths:
       - infra/**
